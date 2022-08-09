@@ -51,7 +51,7 @@ function App() {
       <button onClick={sortByPopularity}>Sort by popularity</button>
       <button onClick={sortByName}>Sort by name</button>
       <div>
-        <table>
+        <table id="tableTitle">
           <tr>
             <th>Picture</th>
             <th>Name</th>
@@ -70,8 +70,8 @@ function App() {
             </td>
             <td>{contact.name}</td>
             <td>{contact.popularity.toFixed(2)}</td>
-            <td>{contact.wonOscar}</td>
-            <td>{contact.wonEmmy}</td>
+            <td>{contact.wonOscar ? "🏆" : ""}</td>
+            <td>{contact.wonEmmy ? "⭐" : ""}</td>
             <td>
               <button onClick={() => deleteContact(contact.id)}>Delete</button>
             </td>
